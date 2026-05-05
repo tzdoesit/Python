@@ -35,3 +35,13 @@ q.append("task2")
 q.append("task3")
 print(q.popleft())  # "task1" - FIFO
 
+# deque - more flexible than a stack or queue alone
+
+from collections import deque
+d=deque([1,2,3])
+d.appendleft(0)  # [0,1,2,3]
+d.append(4)      # [0,1,2,3,4]
+d.popleft()      # 0
+d.pop()          # 4
+d.append(69)
+print(d)         # should print [1,2,3,69]
